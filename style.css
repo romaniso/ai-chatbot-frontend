@@ -7,13 +7,13 @@
 }
 
 body {
-  background-color: rgb(243, 225, 255);
+  background-color: rgb(35, 197, 250);
 }
 
 .glass-bg {
   /* Glass effect */
-  background: rgba(222, 222, 222, 0.098);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  background: rgba(228, 228, 228, 0.8);
+  box-shadow: 0 0px 15px 0 rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
   border: 1px solid rgba(255, 255, 255, 0.669);
@@ -33,7 +33,7 @@ body {
   transition: background 0.2s ease, transform 1s ease;
 }
 .chatbot-toggle:hover {
-  background: rgba(31, 38, 135, 0.215);
+  background: rgba(192, 195, 239, 0.897);
 }
 .show-chatbot .chatbot-toggle {
   transform: rotate(450deg);
@@ -191,7 +191,7 @@ body {
   transition: box-shadow 0.2s ease;
 }
 .chat-input:hover {
-  box-shadow: 0 0 8px 0 rgba(106, 0, 255, 0.3);
+  box-shadow: 0 0 8px 0 rgba(132, 91, 255, 0.7);
 }
 
 .chat-input textarea {
