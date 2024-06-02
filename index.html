@@ -12,7 +12,7 @@
     <script src="script.js" defer></script>
   </head>
   <body>
-    <div class="show-chatbot">
+    <div class="show-chatbot" id="chatBot">
       <button class="chatbot-toggle glass-bg">
         <span class="material-symbols-outlined">mode_comment</span>
         <span class="material-symbols-outlined">close</span>
@@ -29,7 +29,9 @@
             <h2>Chatbot</h2>
             <p>Online with AI</p>
           </div>
-          <span class="material-symbols-outlined">close</span>
+          <span class="material-symbols-outlined" id="chatbot-close-btn"
+            >close</span
+          >
         </header>
         <ul class="chatbox">
           <li class="chat incoming">
