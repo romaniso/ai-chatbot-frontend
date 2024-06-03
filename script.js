@@ -485,4 +485,6 @@ const importGoogleFonts = () => {
   document.head.appendChild(linkElement);
 };
 
-main();
+document.addEventListener("DOMContentLoaded", function () {
+  main();
+});
