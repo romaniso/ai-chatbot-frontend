@@ -8,7 +8,6 @@ const chatbotActivate = () => {
   const chatbotCloseBtn = document.querySelector("#chatbot-close-btn");
 
   let userMessage;
-  const API_KEY = "example-of-apikey-from-openai";
   const inputInitHeight = chatInput.scrollHeight;
 
   const createRequestTime = () => {
@@ -71,26 +70,22 @@ const chatbotActivate = () => {
 
   //@FIXME: should be handled by backend app
   const generateResponse = (li, message) => {
-    const API_URL = "https://api.openai.com/v1/chat/completions";
+    const API_URL = "https://ai-chatbot-tyxf.onrender.com" + "/api/chat"; //@TODO: replace with real one
     const messageElement = li.querySelector("p");
 
     const requestOptions = {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        Authorization: `Bearer ${API_KEY}`,
       },
-      body: JSON.stringify({
-        model: "gpt-3.5-turbo",
-        messages: [{ role: "user", content: message }],
-      }),
+      body: JSON.stringify({ message }),
     };
 
     // Send POST request to API
     fetch(API_URL, requestOptions)
       .then((res) => res.json())
       .then((data) => {
-        messageElement.textContent = data.choices[0].message.content;
+        messageElement.textContent = data.message;
       })
       .catch((err) => {
         messageElement.classList.add("error");
