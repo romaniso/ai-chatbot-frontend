@@ -2,6 +2,7 @@
 const main = () => {
   //gather function
   chatbotDOM();
+  importGoogleFonts();
   chatbotStyles();
   chatbotJS();
   console.log("CHATBOT ACTIVATED");
@@ -468,6 +469,20 @@ const chatbotJS = () => {
     document.querySelector("#chatBot").classList.remove("show-chatbot")
   );
   console.log("CHATBOT JS GENERATED");
+};
+
+const importGoogleFonts = () => {
+  const linkElement = document.createElement("link");
+
+  // Set the rel attribute to "stylesheet"
+  linkElement.rel = "stylesheet";
+
+  // Set the href attribute to the Google Fonts URL
+  linkElement.href =
+    "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0";
+
+  // Append the link element to the head of the document
+  document.head.appendChild(linkElement);
 };
 
 main();
