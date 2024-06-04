@@ -59,13 +59,10 @@ const chatbotActivate = () => {
     chatBox.appendChild(createChatLi(userMessage, "outgoing"));
     chatBox.scrollTo(0, chatBox.scrollHeight);
 
-    //@TODO: replace with res await
-    setTimeout(() => {
-      const incomingChatLi = createChatLi("Loading...", "incoming");
-      chatBox.appendChild(incomingChatLi);
-      chatBox.scrollTo(0, chatBox.scrollHeight);
-      generateResponse(incomingChatLi, userMessage);
-    }, 600);
+    const incomingChatLi = createChatLi("Loading...", "incoming");
+    chatBox.appendChild(incomingChatLi);
+    chatBox.scrollTo(0, chatBox.scrollHeight);
+    generateResponse(incomingChatLi, userMessage);
   };
 
   //@FIXME: should be handled by backend app
