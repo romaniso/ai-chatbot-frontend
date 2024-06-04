@@ -119,6 +119,10 @@ const chatbotStyles = () => {
       box-sizing: border-box;
       font-family: "Poppins", sans-serif;
     }
+    #chatBot {
+      position: relative;
+      z-index: 999;
+    }
 
     .glass-bg {
       /* Glass effect */
