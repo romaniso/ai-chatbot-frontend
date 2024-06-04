@@ -72,7 +72,6 @@ Node.js with Express.js
         position: fixed;
         right: 0px;
         bottom: 0px;
-        z-index: 999;
       "
 ></iframe>
 ```
