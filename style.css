@@ -6,10 +6,6 @@
   font-family: "Poppins", sans-serif;
 }
 
-body {
-  background-color: rgb(35, 197, 250);
-}
-
 .glass-bg {
   /* Glass effect */
   background: rgba(228, 228, 228, 0.8);
