@@ -447,6 +447,12 @@ const chatbotJS = () => {
         chatBox.scrollTo(0, chatBox.scrollHeight);
       });
   };
+  const handleClickOutside = (e) => {
+    if (!document.querySelector(".show-chatbot")) return;
+    if (!document.querySelector(".show-chatbot").contains(e.target)) {
+      document.querySelector("#chatBot").classList.remove("show-chatbot");
+    }
+  };
 
   //Listeners
   chatInput.addEventListener("input", () => {
@@ -468,6 +474,7 @@ const chatbotJS = () => {
   chatbotCloseBtn.addEventListener("click", () =>
     document.querySelector("#chatBot").classList.remove("show-chatbot")
   );
+  document.addEventListener("click", (e) => handleClickOutside(e));
   console.log("CHATBOT JS GENERATED");
 };
 
